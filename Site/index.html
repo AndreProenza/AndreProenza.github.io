@@ -1,0 +1,157 @@
+<!--@Author Andre Proenza-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+		window.onload = function() {
+            currentMode();
+            currentLanguage();
+		}
+	</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" id="style" href="CSS/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Andre Proenza</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="my-name">Andre Proenza</li> 
+                <li><a href="#"><i class="fas fa-id-badge" onmouseover="showAboutMe()" onmouseout="hideAboutMe()"></i><span id="aboutMe" onmouseover="showAboutMe()" onmouseout="hideAboutMe()"> About Me</span></a></li>
+                <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i> Linked In</a></li>
+                <li><a href="mailto:proenza.1999@gmail.com" id="contacts"><i class="fas fa-envelope" ></i><span id="contacts2"> Contacts</span></a></li>
+            </ul>
+            <p id="course">Software Engineer</p>
+            <p id="aboutMe-dropdown">About Me...</p>
+        </nav>
+    </header>
+    <!-- Black & White Here -->
+    <div class="center-box-mode">
+        <button onclick="darkMode()"><i class="fas fa-lightbulb"></i> Dark</button><button onclick="lightMode()"><i class="far fa-lightbulb"></i> Light</button>
+    </div>
+    <!-- Flags Here-->
+    <div class="center-box-language">
+        <button onclick="getLanguage()" id="mainLanguage"><img src="IMG/england.jpg" class="img-languages">&nbsp English</button><button onclick="dropdown()" id="special-button"><i class="fas fa-caret-down"></i></button>
+        <div id="dropdown">
+            <button onclick="swapLanguage('English')"><img src="IMG/england.jpg" class="img-languages">&nbsp English</button>
+            <button onclick="swapLanguage('Portuguese')"><img src="IMG/portugal.png" class="img-languages">&nbsp Português</button>
+            <button onclick="swapLanguage('Spanish')"><img src="IMG/spain.png" class="img-languages">&nbsp Español</button>
+            <button onclick="swapLanguage('Dutch')"><img src="IMG/germany.png" class="img-languages">&nbsp Deutsche</button>
+        </div>
+    </div>
+     <!-- Divide display in two halves-->
+    <div id="left-block">
+        <div class="box1"> 
+            <div id="box1-img">
+                <img src="IMG/Pro.jpg" id="img-profile"> 
+            </div>     
+            <div id="box1-items">
+                <!-- My settings -->
+                <div class="box1-item">
+                    <p id="nationality"><span>Nationality:</span> Portuguese</p>
+                </div>
+                <div class="box1-item">
+                    <p id="languages"><span>Languages:</span> Portuguese, Spanish, English</p>
+                </div>
+                <div class="box1-item">
+                    <p id="education">Education:</p>
+                    <div id="education-container">
+                        <div>
+                            <a href="https://tecnico.ulisboa.pt/en/"><img src="IMG/ist.png" class="img-university"></a>
+                        </div>
+                        <div>
+                            <p id="master">Master in Computer Science & Engeneering</p>
+                            <a href="https://tecnico.ulisboa.pt/en/"><p id="ist">Instituto Superior Técnico</p></a>
+                        </div>
+                        <div>
+                            <a href="https://ciencias.ulisboa.pt/en"><img src="IMG/fcul.png" class="img-university"></a>
+                        </div>
+                        <div>
+                            <p id="bachelor">Bachelor in Computer Science & Engeneering</p>
+                            <a href="https://ciencias.ulisboa.pt/en"><p id="fcul">Faculdade de Ciências Universidade de Lisboa</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box2">
+            <p id="employement">Work Experience</p>
+            <div id="box2-container">
+                <div class="info">
+                    <p>Programmer, company name</p>
+                    <p class="box2-inside1">Dec 2020 - Present</p>
+                    <p class="box2-inside2" id="text1">- Worked as ...</p>
+                    <p class="box2-inside2" id="text2">- Developed ...</p>
+                </div>
+                <div class="cities">
+                    <p onmouseover="show('Lisbon')" onmouseout="hideCity()" id="lisbon">Lisbon</p>
+                    <div class="cities-dropdown">
+                        <div>
+                            <img src="IMG/lisbon.jpg" alt="Lisbon">
+                        </div>
+                        <div>
+                            <p id="lisbon-text">Capital and largest city of Portugal, with a population of 3 million in the metropolitan area
+                                One of the oldest cities in the world, and the second-oldest European capital city (after Athens)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="right-block">
+        <div id="block-projects">
+            <h2 id="projects">Projects</h2>
+            <div id="table">
+                <div>
+                    <!--Does Nothing Just Design-->
+                </div>
+                <div id="block-projects-mine">
+                    <h3 id="mine">Mine</h3>
+                    <div>
+                        <p id="myProjects">My projects...</p>
+                        <!-- <img src="" alt=""> -->
+                    </div>
+                </div>
+                <div>
+                    <!--Does Nothing Just Design-->
+                </div>
+                <div id="block-projects-contributed">
+                    <h3 id="contributed">Contributed</h3>
+                    <div>
+                        <p id="contributedProjects">Contributed projects...</p>
+                        <!-- <img src="" alt=""> -->
+                    </div>
+                </div>
+                <div>
+                    <!--Does Nothing Just Design-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <span id="footer-title">Knowledge & Skills</span>
+        <!-- Icons Here -->
+        <ul>
+            <li><i class="fab fa-java"></i></li>
+            <li><i class="fab fa-python"></i></li>
+            <li><i class="fab fa-js"></i></li>
+            <li><i class="fas fa-database"></i></i></li>
+            <li><i class="fas fa-file-code"></i></i></li>
+            <li><i class="fab fa-css3-alt"></i></i></li>
+        </ul>
+        <div id="footer-programming-names">
+            <div><p>Java</p></div>
+            <div><p>Python</p></div>
+            <div><p>JavaScript</p></div>
+            <div><p>MySQL</p></div>
+            <div><p>HTML</p></div>
+            <div><p>CSS</p></div>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="JS/script.js"></script>
+</html>
