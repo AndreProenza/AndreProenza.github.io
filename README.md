@@ -2,6 +2,7 @@
 
 
 --------- NOT RESPONSIVE YET ---------
+
 --------- PROBABLY THE DISPLAY WILL NOT SUIT YOUR SCREEN SIZE ---------
 
 Welcome to my personal Web Site!
