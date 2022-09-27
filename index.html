@@ -1,157 +1,673 @@
-<!--@Author Andre Proenza-->
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <script>
-		window.onload = function() {
-            currentMode();
-            currentLanguage();
-		}
-	</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" id="style" href="CSS/style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <title>Andre Proenza</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Andre Proenza</title>
+  <meta content="Andre Proenza web site" name="description">
+  <meta content="Andre, Proenza, Proença, AndreProenza, Andre Proença, AndreProença, AndréProença, AndréProenza, portfolio, 
+  Portfolio, Academic Projects, personal portfolio" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/icon.png" rel="icon">
+  <link href="assets/img/icon.png" rel="icon">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li id="my-name">Andre Proenza</li> 
-                <li><a href="#"><i class="fas fa-id-badge" onmouseover="showAboutMe()" onmouseout="hideAboutMe()"></i><span id="aboutMe" onmouseover="showAboutMe()" onmouseout="hideAboutMe()"> About Me</span></a></li>
-                <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
-                <li><a href="#"><i class="fab fa-linkedin"></i> Linked In</a></li>
-                <li><a href="mailto:proenza.1999@gmail.com" id="contacts"><i class="fas fa-envelope" ></i><span id="contacts2"> Contacts</span></a></li>
-            </ul>
-            <p id="course">Software Engineer</p>
-            <p id="aboutMe-dropdown">About Me...</p>
-        </nav>
-    </header>
-    <!-- Black & White Here -->
-    <div class="center-box-mode">
-        <button onclick="darkMode()"><i class="fas fa-lightbulb"></i> Dark</button><button onclick="lightMode()"><i class="far fa-lightbulb"></i> Light</button>
-    </div>
-    <!-- Flags Here-->
-    <div class="center-box-language">
-        <button onclick="getLanguage()" id="mainLanguage"><img src="IMG/england.jpg" class="img-languages">&nbsp English</button><button onclick="dropdown()" id="special-button"><i class="fas fa-caret-down"></i></button>
-        <div id="dropdown">
-            <button onclick="swapLanguage('English')"><img src="IMG/england.jpg" class="img-languages">&nbsp English</button>
-            <button onclick="swapLanguage('Portuguese')"><img src="IMG/portugal.png" class="img-languages">&nbsp Português</button>
-            <button onclick="swapLanguage('Spanish')"><img src="IMG/spain.png" class="img-languages">&nbsp Español</button>
-            <button onclick="swapLanguage('Dutch')"><img src="IMG/germany.png" class="img-languages">&nbsp Deutsche</button>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/profile-img.png" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">André Proenza</a></h1>
+        <div class="social-links mt-2 text-center">
+          <a href="https://www.linkedin.com/in/andreproenza/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/AndreProenza" class="github"><i class="bx bxl-github"></i></a>
         </div>
-    </div>
-     <!-- Divide display in two halves-->
-    <div id="left-block">
-        <div class="box1"> 
-            <div id="box1-img">
-                <img src="IMG/Pro.jpg" id="img-profile"> 
-            </div>     
-            <div id="box1-items">
-                <!-- My settings -->
-                <div class="box1-item">
-                    <p id="nationality"><span>Nationality:</span> Portuguese</p>
-                </div>
-                <div class="box1-item">
-                    <p id="languages"><span>Languages:</span> Portuguese, Spanish, English</p>
-                </div>
-                <div class="box1-item">
-                    <p id="education">Education:</p>
-                    <div id="education-container">
-                        <div>
-                            <a href="#"><img src="#" class="img-university"></a><!--"https://tecnico.ulisboa.pt/en/"  "IMG/ist.png"-->
-                        </div>
-                        <div>
-                            <p id="master">Master in Computer Science & Engeneering</p>
-                            <a href="#"><p id="#">Uncertain...</p></a><!--href="https://tecnico.ulisboa.pt/en/" <p id="ist">Instituto Superior Técnico</p>  -->
-                        </div>
-                        <div>
-                            <a href="https://ciencias.ulisboa.pt/en"><img src="IMG/fcul.png" class="img-university"></a>
-                        </div>
-                        <div>
-                            <p id="bachelor">Bachelor in Computer Science & Engeneering</p>
-                            <a href="https://ciencias.ulisboa.pt/en"><p id="fcul">Faculdade de Ciências Universidade de Lisboa</p></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="box2">
-            <p id="employement">Work Experience</p>
-            <div id="box2-container">
-                <div class="info">
-                    <p>Programmer, company name</p>
-                    <p class="box2-inside1">Dec 2020 - Present</p>
-                    <p class="box2-inside2" id="text1">- Worked as ...</p>
-                    <p class="box2-inside2" id="text2">- Developed ...</p>
-                </div>
-                <div class="cities">
-                    <p onmouseover="show('Lisbon')" onmouseout="hideCity()" id="lisbon">Lisbon</p>
-                    <div class="cities-dropdown">
-                        <div>
-                            <img src="IMG/lisbon.jpg" alt="Lisbon">
-                        </div>
-                        <div>
-                            <p id="lisbon-text">Capital and largest city of Portugal, with a population of 3 million in the metropolitan area
-                                One of the oldest cities in the world, and the second-oldest European capital city (after Athens)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="right-block">
-        <div id="block-projects">
-            <h2 id="projects">Projects</h2>
-            <div id="table">
-                <div>
-                    <!--Does Nothing Just Design-->
-                </div>
-                <div id="block-projects-mine">
-                    <h3 id="mine">Mine</h3>
-                    <div>
-                        <p id="myProjects">My projects...</p>
-                        <!-- <img src="" alt=""> -->
-                    </div>
-                </div>
-                <div>
-                    <!--Does Nothing Just Design-->
-                </div>
-                <div id="block-projects-contributed">
-                    <h3 id="contributed">Contributed</h3>
-                    <div>
-                        <p id="contributedProjects">Contributed projects...</p>
-                        <!-- <img src="" alt=""> -->
-                    </div>
-                </div>
-                <div>
-                    <!--Does Nothing Just Design-->
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <span id="footer-title">Knowledge & Skills</span>
-        <!-- Icons Here -->
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
         <ul>
-            <li><i class="fab fa-java"></i></li>
-            <li><i class="fab fa-python"></i></li>
-            <li><i class="fab fa-js"></i></li>
-            <li><i class="fas fa-database"></i></i></li>
-            <li><i class="fas fa-file-code"></i></i></li>
-            <li><i class="fab fa-css3-alt"></i></i></li>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#facts" class="nav-link scrollto"><i class="bi bi-lightbulb"></i> <span>Facts</span></a></li>
+          <li><a href="#knwoledge" class="nav-link scrollto"><i class="bi bi-gear-wide"></i> <span>Knwoledge</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bi bi-file-earmark-text"></i> <span>Resume</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bi bi-code"></i> <span>Academic Projects</span></a></li>
+          <li><a href="#competences" class="nav-link scrollto"><i class="bi bi-sliders"></i> <span>Competences</span></a></li>
+          <li><a href="#certificates" class="nav-link scrollto"><i class="bi bi-journal-bookmark-fill"></i> <span>Certificates</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
-        <div id="footer-programming-names">
-            <div><p>Java</p></div>
-            <div><p>Python</p></div>
-            <div><p>JavaScript</p></div>
-            <div><p>MySQL</p></div>
-            <div><p>HTML</p></div>
-            <div><p>CSS</p></div>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>André Proenza</h1>
+      <p>I'm <span class="typed" data-typed-items=" a Computer Science Engineer, a Technology Enthusiast, Specialized in CyberSecurity , Specialized in Enterprise Integration, Specialized in Blockchain"></span></p>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <p>I'm a programming enthusiast passionate about building quality software systems, and a "part-time" traveler.</p>
+          <p>I believe that the greatest source of knowledge lies in experiences.</p>
         </div>
-    </footer>
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="assets/img/profile-img.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Computer Science Engineer</h3>
+            <p class="fst-italic">
+              Currently, I am taking a master's degree in Computer Science and Engineering at Instituto Superior Técnico and Technische Universität München, getting specialized in cybersecurity and Management of IT services.
+            </p>
+            <p class="fst-italic"> Besides that, I’m researching for my master thesis entitled “Blockchain Based Residential Smart Rent” which relates the
+              blockchain technology with the real estate industry.</p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>27 March 1999</span></li> -->
+                  <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong> <span>André Proença</span></li>
+                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li> -->
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Munich, Germany</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Nationality:</strong> <span>Portuguese</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Languages:</strong> <span>Portuguese, Spanish, English, German</span></li>
+                </ul>
+              </div>
+            </div>
+            <p>
+              During my academic journey I gained a solid understanding about the world of logic, programming and algorithms. 
+              I already had a great passion for developing small pieces of code on my own, however when I was introduced to functional programming (Haskell), I realized how powerful functional programming is, and my passion skyrocketed.
+            </p>
+            <p>I'm able to quickly learn new technologies, skills, develop robust and reliable software and apply design patterns to organize and maintain readable code. 
+              I consider myself an organized person, I like to plan professional and personal projects in advance. 
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Facts</h2>
+          
+        </div>
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="count-box">
+              <i class="bi bi-github"></i>
+              <span data-purecounter-start="0" data-purecounter-end="13" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Repositories</strong> - 13 Github Repositories</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="count-box">
+              <i class="bi bi-geo-fill"></i>
+              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Countries</strong> - countries visited</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="count-box">
+              <i class="bi bi-translate"></i>
+              <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Languages</strong> - Spoken Languages</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="count-box">
+              <i class="bi bi-pen"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Master Thesis</strong> - Blockchain Based Residential Smart Rent</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+
+    <!-- ======= Knwoledge Section ======= -->
+    <section id="knwoledge" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Knwoledge</h2>
+          <p></p>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6" data-aos="fade-up">
+
+            <div class="">
+              <p class="skill">Algorithms and Data Structures</p>
+              <p class="skill">Software Security</p>
+              <p class="skill">Security and Reliability</p>
+              <p class="skill">High Reliability Systems</p>
+              <p class="skill">Forensic Cybersecurity</p>
+              <p class="skill">Databases Management</p>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="">
+              <p class="skill">Software Design Patterns</p>
+              <p class="skill">Distributed Systems</p>
+              <p class="skill">Management and of IT Infrastructures and Services</p>
+              <p class="skill">Enterprise Integration</p>
+              <p class="skill">Mobile and Ubiquitous Computing</p>
+              <p class="skill">Blockchain and Smart Contracts</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+            <blockquote class="blockquote">
+              <p class="pb-2">"The roots of education are bitter, but the fruit is sweet"</p>
+              <p class="blockquote-footer">Aristotles</p>
+            </blockquote>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Master in Computer Science and Engineering</h4>
+              <h5>2022 - 2023</h5>
+              <p><em><a href="https://www.tum.de/en/" class="uni-link">University of Munich (Erasmus+)</a></em></p>
+              <img src="assets/img/education/tum.png" class="education-img-tum">
+            </div>
+            <div class="resume-item">
+              <h4>Master in Computer Science and Engineering</h4>
+              <h5>2021 - 2023</h5>
+              <p><em><a href="https://tecnico.ulisboa.pt/en/" class="uni-link">Instituto Superior Técnico</a></em></p>
+              <img src="assets/img/education/ist.png" class="education-img">
+            </div>
+            <div class="resume-item">
+              <h4>Introduction to the Management of Industrial Companies</h4>
+              <h5>2022 - 2022</h5>
+              <p><em><a href="https://www.cvut.cz/en" class="uni-link">Czech Technical University Prague (ATHENS)</a></em></p>
+              <img src="assets/img/education/ctu.jpg" class="education-img">
+            </div>
+            <div class="resume-item">
+              <h4>Computer Science</h4>
+              <h5>2021 - 2022</h5>
+              <p><em><a href="https://www.42lisboa.com/en/" class="uni-link">42 Lisbon</a></em></p>
+              <img src="assets/img/education/42.png" class="education-img">
+            </div>
+            <div class="resume-item">
+              <h4>Bachelor in Computer Science and Engineering</h4>
+              <h5>2019 - 2021</h5>
+              <p><em><a href="https://ciencias.ulisboa.pt/en" class="uni-link">Faculdade de Ciências da Universidade de Lisboa</a></em></p>
+              <img src="assets/img/education/fcul.jpg" class="education-img">
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Master Thesis Research</h4>
+              <h5>2022 - Present</h5>
+              <p><em><a href="https://unlockit.io/en" class="uni-link">Unlockit, Lisbon, Portugal</a></em></p>
+              <img src="assets/img/professional-experience/unlockit.jpg" class="professional-experience-img">
+              <ul>
+                <li>Researching Blockchain and Smart contracts</li>
+                <li>Writting a thesis entitle Blockchain Based Residential Smart Rent a tokenization model, allowing for users to self-manage a representation of their properties on the ledger for diverse purposes. </li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Software Architect Engineer</h4>
+              <h5>2022 - Present</h5>
+              <p><em><a href="https://resylhealth.com/" class="uni-link">Resyl Health, Lisbon, Portugal</a></em></p>
+              <img src="assets/img/professional-experience/resyl.png" class="professional-experience-img">
+              <ul>
+                <li>Building a digital healthcare ecosystem that provides patients in Europe with the easiest tool to interact with all their healthcare providers through a single platform.</li>
+                <li>Develing system backend architect and security</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Collaborator</h4>
+              <h5>2021 - 2022</h5>
+              <p><em><a href="https://neiist.tecnico.ulisboa.pt/" class="uni-link">NEIIST – Computer Science and Engineering Students Nucleus of Instituto Superior Técnico, Lisbon, Portugal</a></em></p>
+              <img src="assets/img/professional-experience/neiist.png" class="professional-experience-img-neiist">
+              <ul>
+                <li>Contacting companies and organizations </li>
+                <li>Organizing events and contributing to the Developer Team</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Academic Projects</h2>
+        </div>
+        <blockquote class="blockquote">
+          <p class="pb-0">“Plans are only good intentions unless they immediately degenerate into hard work”</p>
+          <p class="blockquote-footer">Peter Drucker</p>
+        </blockquote>
+        
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-android">Android</li>
+              <li data-filter=".filter-cmd">Command Line</li>
+              <li data-filter=".filter-modelling">3D Modelling</li>
+              <li data-filter=".filter-cybsec">Cyber Security</li>
+              <li data-filter=".filter-integration">Integration</li>
+              <li data-filter=".filter-tools">Tools</li>
+              <li data-filter=".filter-ideas">Innovative Digital Ideas</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photohub/photo0.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/photohub/photo0.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="PhotoHub - 
+                A photos application that allows a user to register and log in, upload one, or several photos simultaneously. 
+                Allows a user to like and dislike, bookmark and delete a photo."><i class="bx bx-search"></i></a>
+                <a href="assets/html/photoHub-details.html" title="More Details"><i class="bx bx-plus"></i></a>
+                <a href="https://github.com/AndreProenza/PhotoHub" title="Github-PhotoHub"><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/medical/photo0.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/medical/photo0.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Medical-Test-Records - A secure healthcare system and network, 
+                which aims to interconnect different healthcare institutions and provide patients with secure and confidential 
+                access to medical records from different organizations."><i class="bx bx-search"></i></a>
+                <a href="assets/html/medical-test-records-details.html" title="More Details"><i class="bx bx-plus"></i></a>
+                <a href="https://github.com/AndreProenza/Medical-Test-Records" title="Github-Medical-Test-Records"><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/corona-diary/photo0.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/corona-diary/photo0.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Corona-Diary - 
+                A daily news website that aims to simulate a search engine for COVID-related news from different countries in the world."><i class="bx bx-search"></i></a>
+                <a href="assets/html/corona-diary-details.html" title="More Details"><i class="bx bx-plus"></i></a>
+                <a href="https://github.com/AndreProenza/corona-diary" title="Github-Corona-Diary"><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-android">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/conversationalist/photo1.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/conversationalist/photo1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="ConversationalIST - 
+                A mobile messaging application focused on speed, security and location features for Android Operating Systems.
+                Allows a user to like and dislike, bookmark and delete a photo."><i class="bx bx-search"></i></a>
+                <a href="assets/html/conversationalist-details.html" title="More Details"><i class="bx bx-plus"></i></a>
+                <a href="https://github.com/AndreProenza/ConversationalIST" title="Github-ConversationalIST"><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cmd">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/instagram-clone/photo1.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/instagram-clone/photo1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="InstagramClone - 
+                InstagramClone is an application that aims to simulate Instagram. It's a client-server type system that allows users to share photos and communicate with other users. (Java backend, terminal interface)"><i class="bx bx-search"></i></a>
+                <a href="assets/html/instagram-clone-details.html" title="More Details"><i class="bx bx-plus"></i></a>
+                <a href="https://github.com/AndreProenza/InstagramClone" title="Github-InstagramClone"><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cmd filter-tools">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/stack-grep/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/stack-grep/photo1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="StackGrep - 
+                An advanced custom grep engine."><i class="bx bx-search"></i></a>
+                <a href="assets/html/stackgrep-details.html" title="More Details"><i class="bx bx-plus"></i></a>
+                <a href="https://github.com/AndreProenza/StackGrep" title="Github-StackGrep"><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-modelling">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/3d-terreiro-paco-lisbon/photo0.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/3d-terreiro-paco-lisbon/photo0.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D-TerreiroPaco-Lisbon - 
+                A 3D virtual reality scenario of Lisbon's Terreiro do Paço with the aim of treating phobias and others psychological disorders."><i class="bx bx-search"></i></a>
+                <a href="assets/html/3d-terreiro-paco-lisbon-details.html" title="More Details"><i class="bx bx-plus"></i></a>
+                <a href="https://github.com/AndreProenza/3D-TerreiroPaco-Lisbon" title="Github-3D-TerreiroPaco-Lisbon"><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cybsec">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/football-leaks/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/football-leaks/photo1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Football-Leaks - 
+                A forensics cyber security simulation of an investigation entitled “Football Leaks”."><i class="bx bx-search"></i></a>
+                <a href="assets/html/football-leaks-details.html" title="More Details"><i class="bx bx-plus"></i></a>
+                <a href="https://github.com/AndreProenza/3d-terreiro-paco-lisbon/photo1.jpg" title="Github-Football-Leaks"><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-integration">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/autonomous-vehicle-as-a-service/photo0.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/autonomous-vehicle-as-a-service/photo0.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Autonomous-Vehicle-As-A-Service - 
+                A cloud-based system that aims at the integration between car manufacturers, autopilot developers, users, and other external service providers."><i class="bx bx-search"></i></a>
+                <a href="assets/html/autonomous-vehicle-as-a-service-details.html" title="More Details"><i class="bx bx-plus"></i></a>
+                <a href="https://github.com/AndreProenza/Autonomous-Vehicle-As-A-Service" title="Github-Autonomous-Vehicle-As-A-Service"><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-ideas">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/spendit/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/spendit/photo1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SpendIT - 
+                Automatic finance manager with analytical AI"><i class="bx bx-search"></i></a>
+                <a href="assets/html/spendit-details.html" title="More Details"><i class="bx bx-plus"></i></a>
+                <a href="https://github.com/AndreProenza/SpendIT" title="Github-SpendIT"><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="competences" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Personal Competences</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="bi bi-journal-check"></i></div>
+            <h4 class="title">Extremely organized</h4>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-chat-right-text"></i></div>
+            <h4 class="title">Assertive and convincing communication</h4>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bi bi-alarm"></i></div>
+            <h4 class="title">Ability to deliver on time</h4>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="bi bi-check2"></i></div>
+            <h4 class="title">Ethical and responsible behavior</h4>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon"><i class="bi bi-mortarboard-fill"></i></div>
+            <h4 class="title">Super motivated to learn</h4>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="bi bi-emoji-wink"></i></div>
+            <h4 class="title">Good at decode others emotions</h4>
+          </div>
+        </div>
+
+      </div>
+
+      <br><br><br><br>
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Profissional Competences</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="bi bi-book"></i></div>
+            <h4 class="title">Willing to learn and adapt to different development environments</h4>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-question-lg"></i></div>
+            <h4 class="title">Able to explain technical data to unfamiliarized people</h4>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bi bi-lightbulb"></i></div>
+            <h4 class="title">Problem Solving</h4>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="bi bi-people-fill"></i></div>
+            <h4 class="title">Able to work independently as well as in a team</h4>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon"><i class="bi bi-search"></i></div>
+            <h4 class="title">Code perfectionist and attention to detail</h4>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="bi bi-code-slash"></i></div>
+            <h4 class="title">Able to develop software according to design patterns</h4>
+          </div>
+        </div>
+
+      </div>
+
+
+    </section><!-- End Services Section -->
+
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="certificates" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Certificates</h2>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up">
+                <p>B2 - FCE - First Certificate in English</p>
+                <img src="assets/img/certificates/camb.png" class="testimonial-img" alt="">
+                <h3>Cambridge Assessment English</h3>
+                <h4>2017</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+                <p>German language level A1.1</p>
+                <img src="assets/img/certificates/goethe.jpg" class="testimonial-img" alt="">
+                <h3>Goethe-Institut Portugal</h3>
+                <h4>2022</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+                <p>Coming soon...</p>
+                <img src="assets/img/certificates/soon.jpg" class="testimonial-img" alt="">
+                <h3>Soon...</h3>
+                <h4>-</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Munich, Germany</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>andreproenzadeveloper@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+351 - Send me an email first!</p>
+              </div>
+
+              <iframe src="https://maps.google.com/maps?q=heidenmannstrasse,%20Munich&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="https://formsubmit.co/andreproenzadeveloper@gmail.com" method="POST" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
-<script type="text/javascript" src="JS/script.js"></script>
+
 </html>
