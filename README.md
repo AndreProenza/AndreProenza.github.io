@@ -1,12 +1,18 @@
-# AndreProenza.github.io
+# Andre Proenza
 
 
---------- NOT RESPONSIVE YET ---------
-
---------- PROBABLY THE DISPLAY WILL NOT SUIT YOUR SCREEN SIZE ---------
-
-Welcome to my personal Web Site!
-
-All contacts and information are there!
+Welcome to my personal Web Site! All contacts and information there! 
 
 Feel free to check it out!
+
+# [andreproenza.github.io](andreproenza.github.io)
+
+
+
+---
+
+## Authors
+
+**André Proença** - [GitHub](https://github.com/AndreProenza)
+
+---
