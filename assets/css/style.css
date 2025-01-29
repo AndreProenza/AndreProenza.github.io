@@ -156,7 +156,7 @@ h6 {
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 .nav-menu {
-  padding: 30px 0 0 0;
+  padding: 20px 0 0 0;
 }
 
 .nav-menu * {
@@ -186,6 +186,11 @@ h6 {
   font-size: 24px;
   padding-right: 8px;
   color: #6f7180;
+}
+
+.nav-menu-slots {
+  height: 50px;
+  padding-left: 25px;
 }
 
 .nav-menu a:hover,
@@ -304,7 +309,7 @@ h6 {
 @media screen and (max-width: 430px) {
 
   #hero {
-    width: 150%;
+    width: 100%;
     background: url("../img/background.jpeg") top right;
   }
 
@@ -417,6 +422,7 @@ section {
 --------------------------------------------------------------*/
 .facts {
   padding-bottom: 30px;
+  padding-top: 10px;
 }
 
 .facts .count-box {
@@ -616,12 +622,16 @@ section {
   margin-right: 10%;
 }
 
-.resume-sub-title {
+.resume-sub-title, .resume-sub-sub-title {
   font-size: 24px;
   font-weight: 600;
   margin-top: 20px;
   margin-bottom: 20px;
   color: #163d73;
+}
+
+.resume-sub-sub-title {
+  font-size: 21px;
 }
 
 
@@ -642,6 +652,10 @@ section {
 
   .resume-sub-title {
     font-size: 18px;
+  }
+
+  .resume-sub-sub-title {
+    font-size: 15px;
   }
 
   .resume-item h4, .resume-item h5 {
