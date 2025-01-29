@@ -8,7 +8,7 @@
 
 #
 
-Welcome to my personal Web Site! All contacts and information there! 
+Welcome to my personal portfolio!
 
 Feel free to check it out!
 
